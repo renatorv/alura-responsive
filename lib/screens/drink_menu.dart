@@ -25,7 +25,12 @@ class DrinkMenu extends StatelessWidget {
             ),
           ),
           SliverGrid(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: MediaQuery.of(context).orientation == Orientation.landscape ? 3 : 2,
+              crossAxisSpacing: 8,
+              mainAxisSpacing: 8,
+              childAspectRatio: MediaQuery.of(context).orientation == Orientation.landscape ? 1.2 : 158/194, // divide altura pela largura 100/100 = 1
+            ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
                 var item = items[index];

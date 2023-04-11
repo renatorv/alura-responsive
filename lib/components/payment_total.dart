@@ -13,8 +13,7 @@ class PaymentTotal extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text("Pedido:",
-                  style: TextStyle(color: AppColors.paymentMethodReceiptColor)),
+              Text("Pedido:", style: TextStyle(color: AppColors.paymentMethodReceiptColor)),
               const Text("R\$ 154,80"),
             ],
           ),
@@ -24,8 +23,7 @@ class PaymentTotal extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text("Serviço (10%):",
-                  style: TextStyle(color: AppColors.paymentMethodReceiptColor)),
+              Text("Serviço (10%):", style: TextStyle(color: AppColors.paymentMethodReceiptColor)),
               const Text("R\$ 15,48"),
             ],
           ),
@@ -35,28 +33,28 @@ class PaymentTotal extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text("Total:",
-                  style: TextStyle(color: AppColors.paymentMethodReceiptColor)),
-              const Text("R\$ 170,28",
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16)),
+              Text("Total:", style: TextStyle(color: AppColors.paymentMethodReceiptColor)),
+              const Text("R\$ 170,28", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16)),
             ],
           ),
         ),
+        const SizedBox(height: 70),
         ElevatedButton(
           onPressed: () {},
           style: AppColors.buttonStyle,
           child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(right: 8.0),
-                  child: Icon(Icons.account_balance_wallet),
-                ),
-                Text(
-                  "Pedir",
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                )
-              ]),
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const <Widget>[
+              Padding(
+                padding: EdgeInsets.only(right: 8.0),
+                child: Icon(Icons.account_balance_wallet),
+              ),
+              Text(
+                "Pedir",
+                style: TextStyle(fontWeight: FontWeight.w500),
+              )
+            ],
+          ),
         )
       ],
     );
